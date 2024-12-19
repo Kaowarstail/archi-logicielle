@@ -1,17 +1,21 @@
 ## Diagramme des cas d’utilisation
 
 ```mermaid
-usecaseDiagram
-    actor ConducteurStandard as "Conducteur standard"
-    actor ConducteurAbonne as "Conducteur abonné"
-    actor Operateur as "Opérateur du parking"
-    actor Technicien as "Technicien de maintenance"
+flowchart TB
+    subgraph Acteurs
+        ConducteurStandard["Conducteur standard"]
+        ConducteurAbonne["Conducteur abonné"]
+        Operateur["Opérateur du parking"]
+        Technicien["Technicien de maintenance"]
+    end
 
-    usecase UC1 as "Entrée dans le parking"
-    usecase UC2 as "Paiement aux automates internes"
-    usecase UC3 as "Paiement à la sortie"
-    usecase UC4 as "Gestion du parc et administration"
-    usecase UC5 as "Maintenance et supervision"
+    subgraph Cas_d_Utilisation
+        UC1["Entrée dans le parking"]
+        UC2["Paiement aux automates internes"]
+        UC3["Paiement à la sortie"]
+        UC4["Gestion du parc et administration"]
+        UC5["Maintenance et supervision"]
+    end
 
     ConducteurStandard --> UC1
     ConducteurStandard --> UC2
@@ -22,7 +26,6 @@ usecaseDiagram
 
     Operateur --> UC4
     Technicien --> UC5
-
 
 ```
 ## Diagrammes de séquence
