@@ -1,22 +1,29 @@
 ## Diagramme des cas d’utilisation
 
 ```mermaid
-
+usecaseDiagram
     actor ConducteurStandard as "Conducteur standard"
     actor ConducteurAbonne as "Conducteur abonné"
     actor Operateur as "Opérateur du parking"
     actor Technicien as "Technicien de maintenance"
 
-    ConducteurStandard --> (Entrée dans le parking)
-    ConducteurStandard --> (Paiement aux automates internes)
-    ConducteurStandard --> (Paiement à la sortie)
-    
-    ConducteurAbonne --> (Entrée dans le parking)
-    ConducteurAbonne --> (Paiement à la sortie)
+    usecase UC1 as "Entrée dans le parking"
+    usecase UC2 as "Paiement aux automates internes"
+    usecase UC3 as "Paiement à la sortie"
+    usecase UC4 as "Gestion du parc et administration"
+    usecase UC5 as "Maintenance et supervision"
 
-    Operateur --> (Gestion du parc et administration)
+    ConducteurStandard --> UC1
+    ConducteurStandard --> UC2
+    ConducteurStandard --> UC3
 
-    Technicien --> (Maintenance et supervision)
+    ConducteurAbonne --> UC1
+    ConducteurAbonne --> UC3
+
+    Operateur --> UC4
+    Technicien --> UC5
+
+
 ```
 ## Diagrammes de séquence
 
