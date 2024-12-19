@@ -112,10 +112,24 @@ Surveiller l’état des barrières, des automates, et initier des demandes de m
 ### Maintenance et supervision
 
 ```mermaid
-
+sequenceDiagram
+    participant Technicien
+    participant Système
+    participant Equipement
+    Technicien->>Système: Consulte l'état des équipements
+    Système-->>Technicien: Affiche l'état des équipements
+    alt Equipement en panne
+        Système-->>Technicien: Envoie une alerte
+        Technicien->>Equipement: Diagnostique le problème
+        Technicien->>Système: Met l'équipement hors service
+        Technicien->>Equipement: Remplace ou répare le composant
+        Technicien->>Système: Réinitialise l'équipement
+        Système-->>Technicien: Confirme la remise en service
+    end
 ```
 - Objectif : Permettre au technicien de diagnostiquer et de résoudre les problèmes.
 - Description : Le technicien consulte l’état des équipements (barrières, automates, lecteurs de badges) et reçoit des alertes en cas de dysfonctionnement. Il peut mettre un automate hors service, remplacer des composants, réinitialiser la barrière, etc.
+
 
 ### Liste de contraintes et règles métiers
 
