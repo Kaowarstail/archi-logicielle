@@ -135,3 +135,7 @@ En résumé :
 - Qualité de la modélisation : Bonne utilisation des diagrammes UML (ou autre notation), bonne structure du modèle, lisibilité.
 - Prise en compte des contraintes : Disponibilité, sécurité, performance.
 - Adaptabilité et évolutivité : La solution est-elle modulaire et extensible ?
+
+## Documentation
+
+Pour plus de détails sur les cas d'utilisation, les diagrammes de séquence, et les règles métiers, veuillez consulter le fichier [uses-case.md](./uses-case.md).
